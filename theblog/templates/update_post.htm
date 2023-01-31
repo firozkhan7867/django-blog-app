@@ -1,0 +1,24 @@
+{% extends 'base.htm' %}
+
+{% block title %}
+Edit Post
+{% endblock title %} 
+{% load static %}
+{% block content %}
+
+{% if request.user.is_authenticated %}
+
+<div class="form-group">
+    <h1> Add Post</h1>
+    <br><br>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit" class="btn btn-secondary">Update</button>
+    </form>
+</div>
+{% else %}
+    <h3>Login to View</h3>
+{% endif %}
+
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'base.htm' %}
+
+{% block title %}
+Add Post
+{% endblock title %} 
+{% load static %}
+{% block content %}
+<div class="form-group">
+    <h1> Add Post</h1>
+    <br><br>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit" class="btn btn-secondary">Post</button>
+    </form>
+</div>
+{% endblock content %}

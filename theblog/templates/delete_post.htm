@@ -1,0 +1,20 @@
+{% extends 'base.htm' %}
+
+{% block title %}
+Delete Post
+{% endblock title %} 
+{% load static %}
+{% block content %}
+
+
+
+<div class="form-group">
+    <h3>Delete : {{post.title}}</h3>
+    <br><br>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <strong>Are you sure</strong>
+        <button type="submit" class="btn btn-secondary">Delete</button>
+    </form>
+</div>
+{% endblock content %}
